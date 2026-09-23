@@ -12,7 +12,8 @@ Site vitrine statique pour Audréanne Gagnon, coach sportive à Montréal. Le pr
 - `styles.css` : tokens, responsive mobile-first et composants
 - `script.js` : menu mobile et animations IntersectionObserver
 - `assets/img/` : logo et placeholders visuels
-- `netlify.toml`, `robots.txt`, `sitemap.xml` : déploiement et SEO
+- `.github/workflows/deploy-pages.yml` : déploiement automatique sur GitHub Pages
+- `.nojekyll`, `netlify.toml`, `robots.txt`, `sitemap.xml` : déploiement et SEO
 
 ## Développement
 
@@ -43,6 +44,14 @@ Les textes sont volontairement écrits directement dans chaque page HTML afin de
 - Les URL canoniques si le site est publié dans un sous-dossier.
 
 Les polices utilisent Google Fonts avec `display=swap` pour le moment. Pour supprimer cette requête externe, télécharger Cormorant Garamond et Jost dans `assets/fonts/`, puis remplacer l'import en haut de `styles.css` par des déclarations `@font-face`.
+
+## Déploiement GitHub Pages
+
+Le workflow `.github/workflows/deploy-pages.yml` publie automatiquement la racine du dépôt sur GitHub Pages à chaque push sur `main`. Il peut aussi être lancé manuellement depuis l'onglet **Actions** avec **Run workflow**.
+
+Dans GitHub, ouvrir **Settings > Pages**, sélectionner **GitHub Actions** comme source de déploiement, puis pousser le dépôt sur la branche `main`. Le workflow utilise les actions officielles `configure-pages`, `upload-pages-artifact` et `deploy-pages`.
+
+L'URL sera généralement `https://<utilisateur>.github.io/<nom-du-repo>/`. Les liens relatifs du site fonctionnent dans ce sous-dossier. Remplacer toutefois `example.com` dans `robots.txt` et `sitemap.xml`, et mettre à jour les URL canoniques si une URL publique est déjà connue.
 
 ## Déploiement Netlify
 

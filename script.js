@@ -5,6 +5,7 @@ if (toggle && nav) {
     toggle.addEventListener('click', () => {
         const open = nav.classList.toggle('is-open');
         toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
         document.body.classList.toggle('menu-open', open);
     });
 
@@ -12,6 +13,7 @@ if (toggle && nav) {
         link.addEventListener('click', () => {
             nav.classList.remove('is-open');
             toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Ouvrir le menu');
             document.body.classList.remove('menu-open');
         });
     });

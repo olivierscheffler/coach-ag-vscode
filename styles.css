@@ -427,7 +427,7 @@ h3 {
 
 .media-frame {
     min-height: 28rem;
-    background: #090909 url('assets/img/portrait.svg') center/cover no-repeat;
+    background: #090909 url('assets/img/portrait.jpg') center/cover no-repeat;
 }
 
 .media-frame.service-image {

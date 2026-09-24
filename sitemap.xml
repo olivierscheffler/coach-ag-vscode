@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/services</loc></url>
-  <url><loc>https://example.com/a-propos</loc></url>
-  <url><loc>https://example.com/candidature</loc></url>
-  <url><loc>https://example.com/confidentialite</loc></url>
+  <url><loc>https://example.com/fr/</loc></url>
+  <url><loc>https://example.com/fr/services.html</loc></url>
+  <url><loc>https://example.com/fr/a-propos.html</loc></url>
+  <url><loc>https://example.com/fr/candidature.html</loc></url>
+  <url><loc>https://example.com/fr/confidentialite.html</loc></url>
+  <url><loc>https://example.com/en/</loc></url>
+  <url><loc>https://example.com/en/services.html</loc></url>
+  <url><loc>https://example.com/en/about.html</loc></url>
+  <url><loc>https://example.com/en/application.html</loc></url>
+  <url><loc>https://example.com/en/privacy.html</loc></url>
 </urlset>

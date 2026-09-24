@@ -4,11 +4,9 @@ Site vitrine statique pour Audréanne Gagnon, coach sportive à Montréal. Le pr
 
 ## Structure
 
-- `index.html` : accueil
-- `services.html` : six services et leurs ancres
-- `a-propos.html` : parcours, palmarès et philosophie
-- `candidature.html` : passerelle vers le formulaire externe
-- `confidentialite.html` : page minimale à faire valider
+- `index.html` : redirection vers la version française
+- `fr/` : pages françaises (`index.html`, `services.html`, `a-propos.html`, `candidature.html`, `confidentialite.html`)
+- `en/` : pages anglaises (`index.html`, `services.html`, `about.html`, `application.html`, `privacy.html`)
 - `styles.css` : tokens, responsive mobile-first et composants
 - `script.js` : menu mobile et animations IntersectionObserver
 - `assets/img/` : logo et placeholders visuels
@@ -17,7 +15,7 @@ Site vitrine statique pour Audréanne Gagnon, coach sportive à Montréal. Le pr
 
 ## Développement
 
-Le site peut être ouvert directement avec `index.html`. Pour tester les chemins comme sur un hébergeur statique, lance un serveur local depuis la racine, par exemple :
+Le site peut être ouvert directement avec `index.html`, qui redirige vers `fr/index.html`. Pour tester les chemins comme sur un hébergeur statique, lance un serveur local depuis la racine, par exemple :
 
 ```bash
 npx serve .
@@ -36,8 +34,8 @@ Les textes sont volontairement écrits directement dans chaque page HTML afin de
 - `assets/img/portrait.svg` par le portrait d'Audréanne.
 - `assets/img/service-training.svg` par les photos des services.
 - `assets/img/instagram.svg` par les publications statiques Instagram.
-- `{{URL_FORMULAIRE}}` dans `candidature.html` et `confidentialite.html`.
-- `{{URL_INSTAGRAM}}` dans les cinq pages.
+- `{{URL_FORMULAIRE}}` dans les pages de candidature et de confidentialité françaises et anglaises.
+- `{{URL_INSTAGRAM}}` dans les dix pages localisées.
 - `[EMAIL PLACEHOLDER]`, le lieu des séances en personne et le compte Instagram.
 - Les passages `[PLACEHOLDER]` et `[À VALIDER]`, notamment le parcours, les catégories et la politique de confidentialité.
 - `example.com` dans `robots.txt` et `sitemap.xml` par le domaine final.
@@ -51,7 +49,7 @@ Le workflow `.github/workflows/deploy-pages.yml` publie automatiquement la racin
 
 Dans GitHub, ouvrir **Settings > Pages**, sélectionner **GitHub Actions** comme source de déploiement, puis pousser le dépôt sur la branche `main`. Le workflow utilise les actions officielles `configure-pages`, `upload-pages-artifact` et `deploy-pages`.
 
-L'URL sera généralement `https://<utilisateur>.github.io/<nom-du-repo>/`. Les liens relatifs du site fonctionnent dans ce sous-dossier. Remplacer toutefois `example.com` dans `robots.txt` et `sitemap.xml`, et mettre à jour les URL canoniques si une URL publique est déjà connue.
+L'URL sera généralement `https://<utilisateur>.github.io/<nom-du-repo>/`. Les liens relatifs du site fonctionnent dans ce sous-dossier. Remplacer toutefois `example.com` dans `robots.txt` et `sitemap.xml`, et mettre à jour les URL canoniques si une URL publique est déjà connue. La racine redirige vers le français; le sélecteur de langue est présent dans chaque header et footer.
 
 ## Déploiement Netlify
 

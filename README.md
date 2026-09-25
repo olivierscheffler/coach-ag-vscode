@@ -25,7 +25,7 @@ Aucune installation n'est requise et il n'y a pas de commande de build : Netlify
 
 ## Modifier le contenu
 
-Les textes sont volontairement écrits directement dans chaque page HTML afin de conserver un site simple et éditable sans chaîne de compilation. Les marqueurs `[PLACEHOLDER]`, `[À VALIDER]`, `[EMAIL PLACEHOLDER]`, `{{URL_FORMULAIRE}}` et `{{URL_INSTAGRAM}}` sont conservés pour remplacement.
+Les textes sont volontairement écrits directement dans chaque page HTML afin de conserver un site simple et éditable sans chaîne de compilation. Les marqueurs `[PLACEHOLDER]`, `[À VALIDER]`, `[EMAIL PLACEHOLDER]`, `{{URL_FORMULAIRE}}` et `https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==` sont conservés pour remplacement.
 
 ## À remplacer avant la mise en ligne
 
@@ -35,7 +35,7 @@ Les textes sont volontairement écrits directement dans chaque page HTML afin de
 - `assets/img/service-training.svg` par les photos des services.
 - `assets/img/instagram.svg` par les publications statiques Instagram.
 - `{{URL_FORMULAIRE}}` dans les pages de candidature et de confidentialité françaises et anglaises.
-- `{{URL_INSTAGRAM}}` dans les dix pages localisées.
+- `https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==` dans les dix pages localisées.
 - `[EMAIL PLACEHOLDER]`, le lieu des séances en personne et le compte Instagram.
 - Les passages `[PLACEHOLDER]` et `[À VALIDER]`, notamment le parcours, les catégories et la politique de confidentialité.
 - `example.com` dans `robots.txt` et `sitemap.xml` par le domaine final.

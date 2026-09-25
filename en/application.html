@@ -48,10 +48,11 @@
                 <li>You choose a time for us to talk.</li>
                 <li>Together, we see whether coaching is a good fit for you.</li>
             </ul>
-            <form class="application-form reveal" name="application-en" method="POST" data-netlify="true"
+            <form class="application-form reveal" name="application-en" method="POST" data-netlify="true" novalidate
                 netlify-honeypot="bot-field" action="thanks.html">
                 <input type="hidden" name="form-name" value="application-en">
                 <p hidden><label>Do not fill out: <input name="bot-field"></label></p>
+                <div class="form-errors" role="alert" aria-live="assertive" tabindex="-1" hidden></div>
                 <div class="form-grid">
                     <div class="form-field"><label for="full-name">Full name</label><input id="full-name"
                             name="full-name" type="text" autocomplete="name" required></div>

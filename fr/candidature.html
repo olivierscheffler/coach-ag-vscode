@@ -12,7 +12,8 @@
     <meta property="og:description"
         content="Tu es motivé(e) et prêt(e) à faire les efforts ? Remplis le formulaire et prends rendez-vous avec Audréanne Gagnon.">
     <meta property="og:image" content="../assets/img/hero.svg">
-    <link rel="canonical" href="/fr/candidature.html" hreflang="fr-CA"><link rel="alternate" href="../en/application.html" hreflang="en-CA">
+    <link rel="canonical" href="/fr/candidature.html" hreflang="fr-CA">
+    <link rel="alternate" href="../en/application.html" hreflang="en-CA">
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles.css">
     <script
@@ -28,7 +29,9 @@
             <nav class="nav" id="main-nav" data-menu aria-label="Navigation principale"><a
                     href="services.html">Services</a><a href="a-propos.html">À propos</a><a href="candidature.html"
                     aria-current="page" class="button button-primary button-small">Postuler</a><a
-                    href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a><a class="language-switch" href="../en/application.html" lang="en">English</a></nav>
+                    href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                    target="_blank" rel="noopener">Instagram</a><a class="language-switch" href="../en/application.html"
+                    lang="en">English</a></nav>
         </div>
     </header>
     <main id="contenu">
@@ -43,12 +46,43 @@
                 <li>Tu remplis le formulaire en quelques minutes.</li>
                 <li>Tu choisis un moment pour qu'on se parle.</li>
                 <li>Ensemble, on voit si le coaching est un bon match pour toi.</li>
-            </ul><a class="button button-primary reveal" href="{{URL_FORMULAIRE}}" target="_blank"
-                rel="noopener">Remplir le formulaire et prendre rendez-vous →</a>
+            </ul>
+            <form class="application-form reveal" name="candidature-fr" method="POST" data-netlify="true"
+                netlify-honeypot="bot-field" action="merci.html">
+                <input type="hidden" name="form-name" value="candidature-fr">
+                <p hidden><label>Ne pas remplir : <input name="bot-field"></label></p>
+                <div class="form-grid">
+                    <div class="form-field"><label for="full-name">Nom complet</label><input id="full-name"
+                            name="full-name" type="text" autocomplete="name" required></div>
+                    <div class="form-field"><label for="phone">Téléphone</label><input id="phone" name="phone"
+                            type="tel" autocomplete="tel" placeholder="(000) 000-0000" required></div>
+                </div>
+                <div class="form-field"><label for="email">Courriel</label><input id="email" name="email" type="email"
+                        autocomplete="email" placeholder="exemple@courriel.com" required></div>
+                <div class="form-field"><label for="goals">Quels sont tes objectifs ?</label><textarea id="goals"
+                        name="goals" required></textarea></div>
+                <div class="form-field"><label for="competition">Aimerais-tu faire de la compétition ?</label><select
+                        id="competition" name="competition" required>
+                        <option value="" selected disabled>Choisir une réponse</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select></div>
+                <div class="form-field"><label for="expectations">Quelles sont tes attentes envers moi
+                        ?</label><textarea id="expectations" name="expectations" required></textarea></div>
+                <div class="form-field"><label for="commitment">Es-tu prêt(e) à mettre les efforts nécessaires pour
+                        atteindre tes objectifs ?</label><select id="commitment" name="commitment" required>
+                        <option value="" selected disabled>Choisir une réponse</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select></div>
+                <div class="form-field"><label for="referral">Comment as-tu entendu parler de moi ?</label><input
+                        id="referral" name="referral" type="text" required></div>
+                <p class="form-note">Les renseignements transmis dans le formulaire sont utilisés uniquement pour
+                    répondre à ta demande. Voir la politique de confidentialité.</p>
+                <button class="button button-primary" type="submit">Envoyer ma candidature</button>
+            </form>
             <p class="other-option reveal">Tu préfères m'écrire ? Message Instagram ou <a class="text-link"
                     href="mailto:[EMAIL PLACEHOLDER]">[EMAIL PLACEHOLDER]</a>.</p>
-            <p class="health-note reveal">Les renseignements transmis dans le formulaire sont utilisés uniquement pour
-                répondre à ta demande. Voir la politique de confidentialité.</p>
         </section>
     </main>
     <footer class="footer">
@@ -60,8 +94,10 @@
                 </div>
                 <nav class="footer-nav" aria-label="Navigation secondaire"><a href="services.html">Services</a><a
                         href="a-propos.html">À propos</a><a href="candidature.html">Postuler</a><a
-                        href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a><a
-                        href="mailto:[EMAIL PLACEHOLDER]">[EMAIL PLACEHOLDER]</a><a class="language-switch" href="../en/application.html" lang="en">English</a></nav>
+                        href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener">Instagram</a><a href="mailto:[EMAIL PLACEHOLDER]">[EMAIL
+                        PLACEHOLDER]</a><a class="language-switch" href="../en/application.html" lang="en">English</a>
+                </nav>
                 <div>
                     <p>© 2026 Audréanne Gagnon</p><a href="confidentialite.html">Politique de confidentialité</a>
                 </div>
@@ -74,5 +110,3 @@
 </body>
 
 </html>
-
-

@@ -34,7 +34,6 @@ Les textes sont volontairement écrits directement dans chaque page HTML afin de
 - `assets/img/portrait.svg` par le portrait d'Audréanne.
 - `assets/img/service-training.svg` par les photos des services.
 - `assets/img/instagram.svg` par les publications statiques Instagram.
-- `{{URL_FORMULAIRE}}` dans les pages de candidature et de confidentialité françaises et anglaises.
 - `https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==` dans les dix pages localisées.
 - `[EMAIL PLACEHOLDER]`, le lieu des séances en personne et le compte Instagram.
 - Les passages `[PLACEHOLDER]` et `[À VALIDER]`, notamment le parcours, les catégories et la politique de confidentialité.
@@ -42,6 +41,12 @@ Les textes sont volontairement écrits directement dans chaque page HTML afin de
 - Les URL canoniques si le site est publié dans un sous-dossier.
 
 Les polices utilisent Google Fonts avec `display=swap` pour le moment. Pour supprimer cette requête externe, télécharger Cormorant Garamond et Jost dans `assets/fonts/`, puis remplacer l'import en haut de `styles.css` par des déclarations `@font-face`.
+
+## Formulaires Netlify
+
+Les pages `fr/candidature.html` et `en/application.html` utilisent Netlify Forms (`candidature-fr` et `application-en`). Cette fonctionnalité fonctionne lorsque le site est déployé sur Netlify; GitHub Pages ne traite pas les soumissions de formulaires.
+
+Après le premier déploiement Netlify, vérifier les formulaires dans **Forms**, puis configurer les notifications par courriel dans **Project configuration > Notifications > Form submission notifications**. Les pages de confirmation sont `fr/merci.html` et `en/thanks.html`.
 
 ## Déploiement GitHub Pages
 

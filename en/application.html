@@ -29,8 +29,9 @@
                 aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><span></span></button>
             <nav class="nav" id="main-nav" data-menu aria-label="Main navigation"><a href="services.html">Services</a><a
                     href="about.html">About</a><a href="application.html" aria-current="page"
-                    class="button button-primary button-small">Apply</a><a href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank"
-                    rel="noopener">Instagram</a><a class="language-switch" href="../fr/candidature.html"
+                    class="button button-primary button-small">Apply</a><a
+                    href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                    target="_blank" rel="noopener">Instagram</a><a class="language-switch" href="../fr/candidature.html"
                     lang="fr-CA">Français</a></nav>
         </div>
     </header>
@@ -46,12 +47,43 @@
                 <li>You fill out the form in a few minutes.</li>
                 <li>You choose a time for us to talk.</li>
                 <li>Together, we see whether coaching is a good fit for you.</li>
-            </ul><a class="button button-primary reveal" href="{{URL_FORMULAIRE}}" target="_blank" rel="noopener">Fill
-                out the form and book a meeting →</a>
+            </ul>
+            <form class="application-form reveal" name="application-en" method="POST" data-netlify="true"
+                netlify-honeypot="bot-field" action="thanks.html">
+                <input type="hidden" name="form-name" value="application-en">
+                <p hidden><label>Do not fill out: <input name="bot-field"></label></p>
+                <div class="form-grid">
+                    <div class="form-field"><label for="full-name">Full name</label><input id="full-name"
+                            name="full-name" type="text" autocomplete="name" required></div>
+                    <div class="form-field"><label for="phone">Phone number</label><input id="phone" name="phone"
+                            type="tel" autocomplete="tel" placeholder="(000) 000-0000" required></div>
+                </div>
+                <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email"
+                        autocomplete="email" placeholder="example@email.com" required></div>
+                <div class="form-field"><label for="goals">What are your goals?</label><textarea id="goals" name="goals"
+                        required></textarea></div>
+                <div class="form-field"><label for="competition">Would you like to compete?</label><select
+                        id="competition" name="competition" required>
+                        <option value="" selected disabled>Choose an answer</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select></div>
+                <div class="form-field"><label for="expectations">What are your expectations of me?</label><textarea
+                        id="expectations" name="expectations" required></textarea></div>
+                <div class="form-field"><label for="commitment">Are you ready to put in the work needed to reach your
+                        goals?</label><select id="commitment" name="commitment" required>
+                        <option value="" selected disabled>Choose an answer</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select></div>
+                <div class="form-field"><label for="referral">How did you hear about me?</label><input id="referral"
+                        name="referral" type="text" required></div>
+                <p class="form-note">The information submitted through the form is used only to respond to your request.
+                    See the privacy policy.</p>
+                <button class="button button-primary" type="submit">Submit my application</button>
+            </form>
             <p class="other-option reveal">Prefer to write to me? Send a message on Instagram or email <a
                     class="text-link" href="mailto:[EMAIL PLACEHOLDER]">[EMAIL PLACEHOLDER]</a>.</p>
-            <p class="health-note reveal">The information submitted through the form is used only to respond to your
-                request. See the privacy policy.</p>
         </section>
     </main>
     <footer class="footer">
@@ -62,7 +94,8 @@
                     <p>AG Coaching · Montreal, QC</p>
                 </div>
                 <nav class="footer-nav" aria-label="Secondary navigation"><a href="services.html">Services</a><a
-                        href="about.html">About</a><a href="application.html">Apply</a><a href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        href="about.html">About</a><a href="application.html">Apply</a><a
+                        href="https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
                         target="_blank" rel="noopener">Instagram</a><a href="mailto:[EMAIL PLACEHOLDER]">[EMAIL
                         PLACEHOLDER]</a></nav>
                 <div>

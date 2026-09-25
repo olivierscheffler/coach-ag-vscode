@@ -11,7 +11,7 @@ Site vitrine statique pour Audréanne Gagnon, coach sportive à Montréal. Le pr
 - `script.js` : menu mobile et animations IntersectionObserver
 - `assets/img/` : logo et placeholders visuels
 - `.github/workflows/deploy-pages.yml` : déploiement automatique sur GitHub Pages
-- `.nojekyll`, `netlify.toml`, `robots.txt`, `sitemap.xml` : déploiement et SEO
+- `.nojekyll`, `netlify.toml`, `robots.txt` : déploiement et contrôle d'indexation
 
 ## Développement
 
@@ -38,7 +38,7 @@ Les textes sont volontairement écrits directement dans chaque page HTML afin de
 - `https://www.instagram.com/gagnon.audreanne?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==` dans les dix pages localisées.
 - `[EMAIL PLACEHOLDER]`, le lieu des séances en personne et le compte Instagram.
 - Les passages `[PLACEHOLDER]` et `[À VALIDER]`, notamment le parcours, les catégories et la politique de confidentialité.
-- `example.com` dans `robots.txt` et `sitemap.xml` par le domaine final.
+- La directive temporaire `noindex` dans les pages, `robots.txt` et `netlify.toml` avant l'ouverture publique.
 - Les URL canoniques si le site est publié dans un sous-dossier.
 
 Les polices utilisent Google Fonts avec `display=swap` pour le moment. Pour supprimer cette requête externe, télécharger Cormorant Garamond et Jost dans `assets/fonts/`, puis remplacer l'import en haut de `styles.css` par des déclarations `@font-face`.
@@ -49,8 +49,8 @@ Le workflow `.github/workflows/deploy-pages.yml` publie automatiquement la racin
 
 Dans GitHub, ouvrir **Settings > Pages**, sélectionner **GitHub Actions** comme source de déploiement, puis pousser le dépôt sur la branche `main`. Le workflow utilise les actions officielles `configure-pages`, `upload-pages-artifact` et `deploy-pages`.
 
-L'URL sera généralement `https://<utilisateur>.github.io/<nom-du-repo>/`. Les liens relatifs du site fonctionnent dans ce sous-dossier. Remplacer toutefois `example.com` dans `robots.txt` et `sitemap.xml`, et mettre à jour les URL canoniques si une URL publique est déjà connue. La racine redirige vers le français; le sélecteur de langue est présent dans chaque header et footer.
+L'URL sera généralement `https://<utilisateur>.github.io/<nom-du-repo>/`. Les liens relatifs du site fonctionnent dans ce sous-dossier. La racine redirige vers le français; le sélecteur de langue est présent dans chaque header et footer.
 
 ## Déploiement Netlify
 
-Importer le dépôt dans Netlify. `netlify.toml` publie la racine (`.`) et ne lance aucune compilation. Le domaine final doit ensuite être reporté dans `robots.txt`, `sitemap.xml`, les balises canoniques et les balises Open Graph si nécessaire.
+Importer le dépôt dans Netlify. `netlify.toml` publie la racine (`.`) et ne lance aucune compilation. Avant la mise en ligne publique, retirer le blocage temporaire dans les balises `meta robots`, `robots.txt` et l'en-tête `X-Robots-Tag`, puis recréer un sitemap si nécessaire.
